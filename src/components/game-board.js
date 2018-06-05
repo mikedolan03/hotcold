@@ -38,9 +38,11 @@ export default class GameBoard extends React.Component {
 		newGuessArray.push(newGuess);
 		this.setState({guesses: newGuessArray});
 
-		if(newGuess === this.state.randomNumber)
+		if(newGuess == this.state.randomNumber)
 		{
 			console.log('player wins!');
+			this.setTemperature("Got it!");
+
 
 		} else 
 		{
@@ -108,11 +110,16 @@ export default class GameBoard extends React.Component {
 		}  else {
 
 			let topMessage = '';
+			let showGuessForm = '';
 
 			if(this.state.temperature === "Got it!") {
-				topMessage = 'You Won. Click new game to play again'; 
+				topMessage = 'You Won. Click new game to play again';
+
 
 			} else { 
+
+				showGuessForm = <GuessForm guessSubmit= {(newGuess)=> this.addNewGuess(newGuess)}/> ;
+
 					 if(this.state.guesses.length <=0) { 
 						topMessage = 'Make your Guess'; 
 					 } else {
@@ -133,7 +140,8 @@ export default class GameBoard extends React.Component {
 
 				<div className="guess-form-box">
 				<h2>{topMessage}</h2>
-				<GuessForm guessSubmit= {(newGuess)=> this.addNewGuess(newGuess)}/>
+				
+				{showGuessForm}
 				
 				<div>
 				Guess #<span className="orange-big guess-count">{this.state.guesses.length}</span>
