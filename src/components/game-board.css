@@ -21,3 +21,13 @@ h2 {
 	text-align: center;
 
 }
+
+.guess-count-container {
+	height: 50px;
+
+}
+
+.past-guesses {
+background-color: #11a8ab;
+height: 50px;
+}

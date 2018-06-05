@@ -158,10 +158,10 @@ export default class GameBoard extends React.Component {
 
 				{showGuessForm}
 				
-				<div>
+				<div className='guess-count-container'>
 				Guess #<span className="orange-big guess-count">{this.state.guesses.length}</span>
 				</div>
-				<div>
+				<div className='past-guesses'>
 				{pastGuesses}
 				</div>
 
