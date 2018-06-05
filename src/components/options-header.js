@@ -6,10 +6,11 @@ export default function OptionsHeader(props) {
 
     	<div className="options-header"> 
     		<div className="left-floating">
-    		<a href="#" >WHAT?</a>
+    		<button onClick={() =>{ props.showButton();}}> What? </button>
+                        
     		</div>
     		<div className="right-floating">
-    		<a href="#" >+ NEW GAME</a>
+    		<button onClick={ () => { props.newGame();}}>+ NEW GAME</button>
     		</div>
     	</div>
 
