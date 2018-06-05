@@ -1,0 +1,23 @@
+.guess-form-box {
+background-color: #394264;
+color: white;
+width: 380px;
+height: 380px;
+margin-right: auto;
+margin-left: auto;
+margin-top: 5%;
+}
+
+.game-title {
+color: white;
+margin-right: auto;
+margin-left: auto;
+margin-top: 5%;
+text-align: center;
+}
+
+h2 {
+	background-color: #cc324b;
+	text-align: center;
+
+}

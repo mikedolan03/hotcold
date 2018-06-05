@@ -1,10 +1,11 @@
 import React from 'react';
+import './options-header.css';
 
 export default function OptionsHeader(props) {
     
     return (
-
-    	<div className="options-header"> 
+    	<header>
+    	<nav className="options-header clear-fix"> 
     		<div className="left-floating">
     		<button onClick={() =>{ props.showButton();}}> What? </button>
                         
@@ -12,7 +13,8 @@ export default function OptionsHeader(props) {
     		<div className="right-floating">
     		<button onClick={ () => { props.newGame();}}>+ NEW GAME</button>
     		</div>
-    	</div>
+    	</nav>
+    	</header>
 
     	);
 

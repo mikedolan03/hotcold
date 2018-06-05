@@ -1,4 +1,5 @@
 import React from 'react';
+import './directions.css'; 
 
 export default function Directions(props) {
     
@@ -15,7 +16,7 @@ export default function Directions(props) {
         <p>So, Are you ready?</p>
 
         <button onClick={() =>{ props.gotIt(); }}> Got it!</button>
-        
+
     	</div>
 
     	);

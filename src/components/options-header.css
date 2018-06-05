@@ -1,0 +1,26 @@
+.options-header {
+position: relative;
+height: 10%;
+padding: 5px;
+}
+
+.left-floating {
+	float: left;
+	display: inline;
+}
+
+.right-floating {
+	float: right;
+	display: inline;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+

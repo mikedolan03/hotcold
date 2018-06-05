@@ -2,6 +2,7 @@ import React from 'react';
 import GuessForm from './guess-form';
 import OptionsHeader from './options-header';
 import Directions from './directions';
+import './game-board.css';
 
 export default class GameBoard extends React.Component {
 
@@ -111,6 +112,19 @@ export default class GameBoard extends React.Component {
 
 			let topMessage = '';
 			let showGuessForm = '';
+			let pastGuesses = ''; 
+
+			if(this.state.guesses.length > 0) {
+
+				//pastGuesses = <span>Last Guess</span>;
+				
+				for(let i = 0; i < this.state.guesses.length; i++) {
+					pastGuesses += this.state.guesses[i] + ' ';
+
+					} 
+
+					console.log('pastGuesses',pastGuesses);
+			}
 
 			if(this.state.temperature === "Got it!") {
 				topMessage = 'You Won. Click new game to play again';
@@ -137,17 +151,18 @@ export default class GameBoard extends React.Component {
 				</div>
 
 
-
+				<div class='game-title'><h1>Hot or Cold</h1></div>
 				<div className="guess-form-box">
+
 				<h2>{topMessage}</h2>
-				
+
 				{showGuessForm}
 				
 				<div>
 				Guess #<span className="orange-big guess-count">{this.state.guesses.length}</span>
 				</div>
 				<div>
-				Last Guess <span className="blue-box last-guess">{this.state.guesses[this.state.guesses.length-1]}</span>
+				{pastGuesses}
 				</div>
 
 				</div>
